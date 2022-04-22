@@ -1,0 +1,38 @@
+package com.example.datawarehouseproject.model
+
+data class StudentModel(
+    val Dalc: Int,
+    val Fedu: Int,
+    val Fjob: String,
+    val G1: Int,
+    val G2: Int,
+    val G3: Int,
+    val Medu: Int,
+    val Mjob: String,
+    val Pstatus: String,
+    val Walc: Int,
+    val absences: Int,
+    val activities: String,
+    val address: String,
+    val age: Int,
+    val failures: Int,
+    val famrel: Int,
+    val famsize: String,
+    val famsup: String,
+    val freetime: Int,
+    val goout: Int,
+    val guardian: String,
+    val health: Int,
+    val higher: String,
+    val internet: String,
+    val nursery: String,
+    val paid: String,
+    val reason: String,
+    val romantic: String,
+    val school: String,
+    val schoolsup: String,
+    val sex: String,
+    val studytime: Int,
+    val traveltime: Int
+
+    )
