@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataWareHouseProject</string>
+    <string name="tahmin_yap">Tahmin Yap</string>
+    <string name="sonuc_goster">Sonuç Göster</string>
+
+    <string name="startNote">Hadi tahmin yaptır ve notunu gör</string>
+</resources>
