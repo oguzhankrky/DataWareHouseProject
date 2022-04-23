@@ -8,9 +8,8 @@
         <entry key="app/src/main/res/drawable/btn_background1.xml" value="0.2245" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2245" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20364583333333333" />
-        <entry key="app/src/main/res/layout/activity_result.xml" value="0.28804347826086957" />
-        <entry key="app/src/main/res/layout/activity_selection_screen.xml" value="0.2487121582031251" />
-        <entry key="app/src/main/res/layout/card_view_design.xml" value="0.28804347826086957" />
+        <entry key="app/src/main/res/layout/activity_result.xml" value="0.16510416666666666" />
+        <entry key="app/src/main/res/layout/activity_selection_screen.xml" value="0.20364583333333333" />
       </map>
     </option>
   </component>

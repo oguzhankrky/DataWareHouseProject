@@ -99,7 +99,7 @@ class CustomAdapter(private val mList: List<ArrayList<String>>,val context: Cont
                 SpinnerObjects.sex=value
             }
             else if(spinner_name == "Age"){
-                SpinnerObjects.age=value.toInt()
+                SpinnerObjects.age=value
             }
             else if(spinner_name == "Address"){
                 SpinnerObjects.address=value
@@ -111,10 +111,10 @@ class CustomAdapter(private val mList: List<ArrayList<String>>,val context: Cont
                 SpinnerObjects.Pstatus=value
             }
             else if(spinner_name == "Medu"){
-                SpinnerObjects.Medu=value.toInt()
+                SpinnerObjects.Medu=value
             }
             else if(spinner_name == "Fedu"){
-                SpinnerObjects.Fedu=value.toInt()
+                SpinnerObjects.Fedu=value
             }
             else if(spinner_name == "Mjob"){
                 SpinnerObjects.Mjob=value
@@ -129,13 +129,13 @@ class CustomAdapter(private val mList: List<ArrayList<String>>,val context: Cont
                 SpinnerObjects.guardian=value
             }
             else if(spinner_name == "Traveltime"){
-                SpinnerObjects.traveltime=value.toInt()
+                SpinnerObjects.traveltime=value
             }
             else if(spinner_name == "Studytime"){
-                SpinnerObjects.studytime=value.toInt()
+                SpinnerObjects.studytime=value
             }
             else if(spinner_name == "Failures"){
-                SpinnerObjects.failures=value.toInt()
+                SpinnerObjects.failures=value
             }
             else if(spinner_name == "Schoolsup"){
                 SpinnerObjects.schoolsup=value
@@ -159,34 +159,34 @@ class CustomAdapter(private val mList: List<ArrayList<String>>,val context: Cont
                 SpinnerObjects.romantic=value
             }
             else if(spinner_name == "Famrel"){
-                SpinnerObjects.famrel=value.toInt()
+                SpinnerObjects.famrel=value
             }
             else if(spinner_name == "Freetime"){
-                SpinnerObjects.freetime=value.toInt()
+                SpinnerObjects.freetime=value
             }
             else if(spinner_name == "Goout"){
-                SpinnerObjects.goout=value.toInt()
+                SpinnerObjects.goout=value
             }
             else if(spinner_name == "Dalc"){
-                SpinnerObjects.Dalc=value.toInt()
+                SpinnerObjects.Dalc=value
             }
             else if(spinner_name == "Walc"){
-                SpinnerObjects.Walc=value.toInt()
+                SpinnerObjects.Walc=value
             }
             else if(spinner_name == "Health"){
-                SpinnerObjects.health=value.toInt()
+                SpinnerObjects.health=value
             }
             else if(spinner_name == "absences"){
-                SpinnerObjects.absences=value.toInt()
+                SpinnerObjects.absences=value
             }
             else if(spinner_name == "grade1"){
-                SpinnerObjects.grade1=value.toInt()
+                SpinnerObjects.grade1=value
             }
             else if(spinner_name == "grade2"){
-                SpinnerObjects.grade2=value.toInt()
+                SpinnerObjects.grade2=value
             }
             else if(spinner_name == "grade3"){
-                SpinnerObjects.grade3=value.toInt()
+                SpinnerObjects.grade3=value
             }
         }
         override fun onClick(v: View?) {
