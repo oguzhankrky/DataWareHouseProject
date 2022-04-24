@@ -26,7 +26,9 @@ class SelectionScreenActivity : AppCompatActivity() {
         val submit= findViewById<Button>(R.id.Submit)
 
         // this creates a vertical layout Manager
+        LinearLayoutManager(this).setStackFromEnd(true);
         recyclerview.layoutManager = LinearLayoutManager(this)
+
         val data = ArrayList<ArrayList<String>>()
         //Obje oluşturarak datayı doldur
         val school = arrayListOf("School","GB","MS")
