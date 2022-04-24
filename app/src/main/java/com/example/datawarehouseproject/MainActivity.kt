@@ -46,8 +46,9 @@ class MainActivity : AppCompatActivity() {
         val repository = Repository()
         val viewModelFactory = MainViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
-        val myPost = Post(1,2, "other", 11,11,11,2,"other","T",1,4,"yes","R",17,0,4,"GT3","yes",5,2,"father",1,"yes","yes","yes","yes","course","no","GP","no","M",2,2)
+        val myPost = Post("GP","M",1,2, "other", 11,11,11,2,"other","T",1,4,"yes","R",17,0,4,"GT3","yes",5,2,"father",1,"yes","yes","yes","yes","course","no","no",2,2)
         viewModel.pushPost(myPost)
+
 
         viewModel.myResponse.observe(this, Observer { response ->
             if(response.isSuccessful){
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Main", response.code().toString())
                 Log.d("Main", response.toString())
                 Log.d("Main", response.headers().toString())
+
 
             }else {
                 Log.d("Main", response.toString())

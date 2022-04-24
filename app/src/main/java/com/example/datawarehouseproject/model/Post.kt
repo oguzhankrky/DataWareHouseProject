@@ -1,6 +1,8 @@
 package com.example.retrofittest.model
 
 data class Post (
+    val school: String,
+    val sex: String,
     val Dalc: Int,
     val Fedu: Int,
     val Fjob: String,
@@ -29,9 +31,7 @@ data class Post (
     val paid: String,
     val reason: String,
     val romantic: String,
-    val school: String,
     val schoolsup: String,
-    val sex: String,
     val studytime: Int,
     val traveltime: Int
 )
