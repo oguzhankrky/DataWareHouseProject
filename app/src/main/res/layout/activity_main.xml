@@ -6,6 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+        <Button
+            android:id="@+id/SignUp"
+            android:layout_width="114dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:alpha="0.9"
+            android:background="@null"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="#0C58DC"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Login"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/Login"
+            android:layout_width="114dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="100dp"
+            android:alpha="0.9"
+            android:background="@null"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="#0C58DC"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.884"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/button1"
@@ -40,7 +78,7 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="319dp"
-            android:layout_height="388dp"
+            android:layout_height="346dp"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

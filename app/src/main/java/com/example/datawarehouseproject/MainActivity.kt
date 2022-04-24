@@ -33,6 +33,19 @@ class MainActivity : AppCompatActivity() {
             finish()
             overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
         }
+
+        binding.Login.setOnClickListener()
+        {
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
+        }
+        binding.SignUp.setOnClickListener()
+        {
+            val intent = Intent(this, SignUp::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
+        }
     }
     private fun ActivityMainBinding()
     {

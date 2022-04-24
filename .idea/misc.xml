@@ -8,9 +8,12 @@
         <entry key="app/src/main/res/drawable/anim_in.xml" value="0.1755" />
         <entry key="app/src/main/res/drawable/btn_background1.xml" value="0.2245" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2245" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.20364583333333333" />
+        <entry key="app/src/main/res/layout-w1240dp/activity_login.xml" value="0.10575635876840696" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.6342989093736103" />
         <entry key="app/src/main/res/layout/activity_result.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/layout/activity_selection_screen.xml" value="0.20364583333333333" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2594838460286458" />
         <entry key="app/src/main/res/layout/card_view_design.xml" value="0.16458333333333333" />
       </map>
     </option>
