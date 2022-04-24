@@ -4,12 +4,20 @@ import CustomAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.core.view.get
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.retrofitdemo.repository.Repository
+import com.example.retrofittest.MainViewModelFactory
+import com.example.retrofittest.model.Post
 
 class SelectionScreenActivity : AppCompatActivity() {
+    private lateinit var viewModel: MainViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selection_screen)
@@ -109,9 +117,38 @@ class SelectionScreenActivity : AppCompatActivity() {
 
         submit.setOnClickListener()
         {
-            val intent = Intent(this, ResultActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
+            Service()
         }
+    }
+    private fun Service()
+    {
+
+        val repository = Repository()
+        val viewModelFactory = MainViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
+        //val myPost = Post("GP","M",1,2, "other", 11,11,11,2,"other","T",1,4,"yes","R",17,0,4,"GT3","yes",5,2,"father",1,"yes","yes","yes","yes","course","no","no",2,2)
+        val myPost = Post(SpinnerObjects.school,SpinnerObjects.sex,SpinnerObjects.Dalc.toInt(),SpinnerObjects.Fedu.toInt(), SpinnerObjects.Fjob, SpinnerObjects.grade1.toInt(),SpinnerObjects.grade2.toInt(),SpinnerObjects.grade3.toInt(),SpinnerObjects.Medu.toInt(),SpinnerObjects.Mjob,SpinnerObjects.Pstatus,SpinnerObjects.Walc.toInt(),SpinnerObjects.absences.toInt(),SpinnerObjects.activities,SpinnerObjects.address,SpinnerObjects.age.toInt(),SpinnerObjects.failures.toInt(),SpinnerObjects.famrel.toInt(),SpinnerObjects.famsize,SpinnerObjects.famsup,SpinnerObjects.freetime.toInt(),SpinnerObjects.goout.toInt(),SpinnerObjects.guardian,SpinnerObjects.health.toInt(),SpinnerObjects.higher,SpinnerObjects.internet,"yes",SpinnerObjects.paid,SpinnerObjects.reason,SpinnerObjects.romantic,SpinnerObjects.schoolsup,SpinnerObjects.studytime.toInt(),SpinnerObjects.traveltime.toInt())
+
+        viewModel.pushPost(myPost)
+
+
+        viewModel.myResponse.observe(this, Observer { response ->
+            if(response.isSuccessful){
+                var Keepresult=response.body().toString().substring(13,response.body().toString().length-2)
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("result", Keepresult)
+                startActivity(intent)
+                overridePendingTransition(R.anim.anim_in, R.anim.anim_out);
+
+                Log.d("Main", response.body().toString())
+                Log.d("Main", response.code().toString())
+                Log.d("Main", response.toString())
+                Log.d("Main", response.headers().toString())
+
+
+            }else {
+                Log.d("Main", response.toString())
+            }
+        })
     }
 }

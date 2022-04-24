@@ -15,14 +15,13 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ActivityMainBinding()
         whenPushNextButton()
-        Service()
+
     }
 
     private fun whenPushNextButton()
@@ -40,27 +39,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-    private fun Service()
-    {
 
-        val repository = Repository()
-        val viewModelFactory = MainViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
-        val myPost = Post("GP","M",1,2, "other", 11,11,11,2,"other","T",1,4,"yes","R",17,0,4,"GT3","yes",5,2,"father",1,"yes","yes","yes","yes","course","no","no",2,2)
-        viewModel.pushPost(myPost)
-
-
-        viewModel.myResponse.observe(this, Observer { response ->
-            if(response.isSuccessful){
-                Log.d("Main", response.body().toString())
-                Log.d("Main", response.code().toString())
-                Log.d("Main", response.toString())
-                Log.d("Main", response.headers().toString())
-
-
-            }else {
-                Log.d("Main", response.toString())
-            }
-        })
-    }
 }
