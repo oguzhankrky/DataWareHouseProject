@@ -53,6 +53,8 @@ class MainActivity : AppCompatActivity() {
             if(response.isSuccessful){
                 Log.d("Main", response.body().toString())
                 Log.d("Main", response.code().toString())
+                Log.d("Main", response.toString())
+                Log.d("Main", response.headers().toString())
 
             }else {
                 Log.d("Main", response.toString())
